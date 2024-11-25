@@ -1,0 +1,19 @@
+// Function for Binary Search
+
+def Search(list, num):
+    Upper = len(list)-1
+    Lower = 0
+    while Lower <= Upper:
+        mid = (Lower + Upper) // 2
+        if list[mid] == num:
+            return f'Mid Value at {mid}'
+        else:
+            if list[mid] > num:
+                Upper = mid
+            else:
+                Lower = mid
+
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 20, 40, 223, 1274, 2222]
+num = 20
+
+print(Search(list, num))
